@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+/*  --  עיצוב כללי של הדף  --  */
+
+body{
+    background-color: #E5EEFF;
+    direction: rtl;
+    padding: 30vh 34vh;
+    display: flex;
+    justify-content: center;    
+}
+
+main{
+    font-family: "Assistant", sans-serif;
+    text-align: center;
+}
+
+/*  --  הגדרות איזורים לתוצגת רשת  --  */
+
+.mainDiv {grid-area: mainDiv;}
+.img1-TwoWomen{grid-area: img1;}
+.img2-TreesOnWater{grid-area: img2;}
+.img3-Cow{grid-area: img3;}
+.img4-HammockOnShore{grid-area: img4;}
+.img5-Grove{grid-area: img5;}
+.img6-Sunset{grid-area: img6;}
+.img7-PeopleOnShore{grid-area: img7;}
+.img8-ForesetEvning{grid-area: img8;}
+.img9-OldmanResting{grid-area: img9;}
+.img10-Monkey{grid-area: img10;}
+.formDiv{grid-area: formDiv;}
+.img11-TrainPassing{grid-area: img11;}
+.img12-FieldGrove{grid-area: img12;}
+.img13-BoatOnWater{grid-area: img13;}
+.img14-GoldenOrb{grid-area: img14;}
+
+
+
+.upperGal{
+    height: 173vh;
+    width: 125vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    direction: rtl;
+    grid-template-areas: 
+    "mainDiv mainDiv img1 img2"
+    "mainDiv mainDiv img3 img4"
+    "img5 img6 img7 img8"
+    "img9 img10 formDiv formDiv"
+    "img11 img12 formDiv formDiv"
+    "img13 img14 formDiv formDiv";
+    grid-gap: 2vh;
+    margin-bottom: 2vh;
+}
+
+
+/*  --  הגדרת החלק הראשון של הגלרייה  --  */
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #020253;
+}
+
+h1{
+    font-size: 4rem;
+    color: #0EE1DA;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+}
+
+p{
+    color: #fff ;
+   width: 80%;
+   display: block;
+}
+
+
+/*  --  הגדרת החלק של הטופס  --  */
+.formDiv{
+    background-color: #8E097C;
+    padding: 0.5vh 5.5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 2rem;
+    color: #fff;
+}
+
+form{
+   margin-top: 2vh;
+    width: 100%;
+   text-align: right;
+   height: 50vh;
+   
+}
+
+label{
+    color: #0EE1DA;
+    font-size: 1rem;
+}
+
+form>input{
+    font-size: 1rem;
+    width: 99%;
+    height: 4.5vh;    
+    color: #020253;
+    margin: 0;
+    border: none;
+    background-color: #E5EEFF;
+   position: relative;
+   right: -0.2vh;
+   font-family: "Assistant", sans-serif;
+}
+
+form>input[type=email]{
+    direction: ltr;
+}
+
+.underLine{
+    height: 1%;
+    width: 99.9%;
+    background-color: #0EE1DA;
+    position: relative;
+    right: -0.2vh;
+    margin: 0;
+    margin-bottom: 3vh;
+}
+
+.textArea{
+    height: 10rem;
+    font-size: 1rem;
+    width: 99%;
+    color: #020253;
+    margin: 0;
+    border: none;
+    background-color: #E5EEFF;
+   position: relative;
+   right: -0.2vh;
+   font-family: "Assistant", sans-serif;
+   margin: 0;
+}
+
+#textAreaLine{
+    position: relative;
+    bottom: 1vh;
+}
+
+.submitButton{
+    font-size: 1.5rem;
+    background-color: #0EE1DA;
+    font-family: "Assistant", sans-serif;
+    color: #020253;
+    font-weight: bold;
+    height: 5vh;
+}
+
+.submitButton:hover{
+    background-color: #020253;
+    color: #0EE1DA;
+}
+
+
+
+
+/*  --  הגדרת תמונות של הגלרייה  --  */
+.img1-TwoWomen{
+    background-image: url(../Images/TwoWomen-big-Rectangle\ 514@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img2-TreesOnWater{
+    background-image: url(../Images/TreesOnWater-big-Rectangle\ 515@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img3-Cow{
+    background-image: url(../Images/Cow-big-Rectangle\ 506-5@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img4-HammockOnShore{
+    background-image: url(../Images/HammockOnShore-big-Rectangle\ 516@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img5-Grove{
+    background-image: url(../Images/Grove-big-Rectangle\ 506-1@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img6-Sunset{
+    background-image: url(../Images/SunsetView-big-Rectangle\ 506-4@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img7-PeopleOnShore{
+    background-image: url(../Images/PeopleOnShore-big-Rectangle\ 506-3@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img8-ForesetEvning{
+    background-image: url(../Images/ForestEvning-big-Rectangle\ 506-2@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img9-OldmanResting{
+    background-image: url(../Images/OldmanResting-big-Rectangle\ 506-7@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img10-Monkey{
+    background-image: url(../Images/Monkey-big-Rectangle\ 506-8@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img11-TrainPassing{
+    background-image: url(../Images/TrainPassing-big-Rectangle\ 506-6@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img12-FieldGrove{
+    background-image: url(../Images/FieldGrove-big-Rectangle\ 506-9@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img13-BoatOnWater{
+    background-image: url(../Images/BoatOnWater-big-Rectangle\ 506@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img14-GoldenOrb{
+    background-image: url(../Images/GoldenOrb-big-Rectangle\ 513@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.galImg:hover{
+    opacity: 0.6;
+}
+
+
+
+
+
+
+/* 
+==========================================
+==========================================
+ */
+
+
+/*  --  For large screen responsive  -- */
+@media screen and (max-width:2500px) {
+    body{
+        padding: 25vh 30vh;
+    }
+
+    .upperGal{
+        width: 125vh;
+        height: 173vh;
+    }
+
+   
+    form{
+        height: 50vh;
+    }
+
+    h2{
+        font-size: 2.5rem;
+        margin: 1.5vh 0;
+    }
+
+    form>input{
+        height: 3.5vh;
+    }
+
+    .underLine{
+        margin-bottom: 3vh ;
+    }
+
+    .textArea{
+        height: 10rem;
+    }
+
+    .submitButton{
+    font-size: 1.5rem;
+    }
+
+}
+
+
+
+/*  --  For mid-large screen responsive  -- */
+@media screen and (max-width:1200px) {
+    body{
+        padding: 20vh 20vh;
+    }
+
+    .upperGal{
+        width: 100vh;
+        height: 143vh;
+    }
+
+    h1{
+        font-size: 3rem;
+        
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+
+    form{
+        height: 35vh;
+    }
+
+    h2{
+        font-size: 2rem;
+        margin: 1vh 0;
+    }
+
+    form>p{
+        width: 85%;
+    }
+
+    form>input{
+        height: 3.0vh;
+    }
+
+    .underLine{
+        margin-bottom: 2.5vh ;
+    }
+
+    .textArea{
+        height: 8rem;
+    }
+
+    .submitButton{
+    font-size: 1.3rem;
+    }
+
+}
+
+
+
+/*  --  For medium screen responsive  -- */
+@media screen and (max-width:990px) {
+    body{
+        padding: 15vh 20vh;
+    }
+    
+    .upperGal{
+        width: 80vh;
+        height: 103vh;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 0.7rem;
+        width: 70%;
+    }
+
+    .formDiv>p{
+        margin-bottom: 1vh;
+        width: 85%;
+    }
+
+    form{
+        margin-top: 0.5vh;
+        height: 30vh;
+    }
+
+    h2{
+        font-size: 1.5rem;
+        margin: 0.5vh 0;
+    }
+
+
+    form>input{
+        height: 2.5vh;
+    }
+
+    .underLine{
+        margin-bottom: 1.5vh ;
+        width: 100.8%;
+    }
+
+    .textArea{
+        height: 6rem;
+    }
+
+    #textAreaLine{
+        bottom: 0.7vh;
+    }
+
+    .submitButton{
+    font-size: 1.1rem;
+    }
+}
+
+
+
+/*  --  For mid-small screen responsive  -- */
+@media screen and (max-width:768px) {
+    body{
+        padding: 15vh 10vh;
+    }
+
+    
+    .upperGal, .lowerGal{
+        height: 250vh;
+        width: 370px;
+        grid-gap: 2vh;
+        margin-bottom: 2vh;
+    }
+    
+    .upperGal{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "mainDiv mainDiv"
+        "mainDiv mainDiv"
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "img7 img8"
+        "formDiv formDiv"
+        "formDiv formDiv"
+        "formDiv formDiv"
+        "img9 img10"
+        "img11 img12"
+        "img13 img14";
+    }
+
+    .img1-TwoWomen{
+        background-image: url(../Images/TwoWomen-small-Rectangle\ 514.png);
+    }
+    
+    .img2-TreesOnWater{
+        background-image: url(../Images/TreesOnWater-small-Rectangle\ 515.png)
+    }
+    
+    .img3-Cow{
+        background-image: url(../Images/Cow-small-Rectangle\ 506-5.png)
+    }
+    
+    .img4-HammockOnShore{
+        background-image: url(../Images/HammockOnShore-small-Rectangle\ 516.png);
+    }
+    
+    .img5-Grove{
+        background-image: url(../Images/Grove-small-Rectangle\ 506-1.png);
+    }
+    
+    .img6-Sunset{
+        background-image: url(../Images/SunsetView-small-Rectangle\ 506-4.png);
+    }
+    
+    .img7-PeopleOnShore{
+        background-image: url(../Images/PeopleOnShore-small-Rectangle\ 506-3.png);
+    }
+    
+    .img8-ForesetEvning{
+        background-image: url(../Images/ForestEvning-small-Rectangle\ 506-2.png);
+    }
+    
+    .img9-OldmanResting{
+        background-image: url(../Images/OldmanResting-small-Rectangle\ 506-7.png);
+    }
+    
+    .img10-Monkey{
+        background-image: url(../Images/Monkey-small-Rectangle\ 506-8.png);
+    }
+    
+    .img11-TrainPassing{
+        background-image: url(../Images/TrainPassing-small-Rectangle\ 506-6.png);
+    }
+    
+    .img12-FieldGrove{
+        background-image: url(../Images/FieldGrove-small-Rectangle\ 506-9.png);
+    }
+    
+    .img13-BoatOnWater{
+        background-image: url(../Images/BoatOnWate-small-Rectangle\ 506.png);
+    }
+    
+    .img14-GoldenOrb{
+        background-image: url(../Images/GoldenOrb-small-Rectangle\ 513.png);
+    }
+
+    .formDiv{
+        padding: 1vh 2.5vh;
+    }
+
+    .formDiv>p{
+        margin-bottom: 1.5vh;
+        width: 90%;
+    }
+
+    form{
+        height: 55vh;
+    }
+
+    h2{
+        font-size: 1.5rem;
+        margin-top:  4vh;
+    }
+
+    form>input{
+        height: 2.5vh;
+    }
+
+    .underLine{
+        bottom: 0.2vh;
+        margin-bottom: 2vh ;
+    }
+
+    .textArea{
+        height: 4rem;
+    }
+
+    .submitButton{
+    font-size: 1.2rem;
+    height: 3vh;
+    }
+
+
+
+}
+
+
+/*  --  For small screen responsive  -- */
+@media screen and (max-width:580px) {
+    body{
+        padding: 0 10vh;
+        padding-bottom: 15vh;
+    }
+
+    .upperGal, .lowerGal{
+        height: 200vh;
+        width: 300px;
+        grid-gap: 1.5vh;
+        margin-bottom: 1vh;
+    }
+
+    .formDiv{
+        padding: 0.5vh 2vh;
+    }
+
+    .formDiv>p{
+        margin-bottom: 1vh;
+        width: 85%;
+    }
+
+    form{
+        height: 50vh;
+    }
+
+    h2{
+        font-size: 1.5rem;
+        margin-top:  4vh;
+    }
+
+    form>input{
+        height: 2.0vh;
+    }
+
+    .underLine{
+        margin-bottom: 2vh ;
+    }
+
+    .textArea{
+        height: 4rem;
+    }
+
+    .submitButton{
+    font-size: 1.1rem;
+    }
+
+}

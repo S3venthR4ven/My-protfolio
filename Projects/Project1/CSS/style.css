@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Varela+Round&display=swap');
+
+*{
+    margin: 0 0;
+}
+
+/*  --  עיצוב כללי  --*/
+body{
+    background-color: #E5EEFF;
+    padding: 29vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#281EFF, #2DFF8C);
+    background-repeat: no-repeat;
+    font-family: "Varela Round", sans-serif;    
+    color: #fff;
+    direction: rtl;
+    text-align: center;
+}
+
+
+/*  --  עיצוב לחלק הראשי  --*/
+main{
+    width: 60%;
+    height: 51vh;
+   text-align: center;
+}
+
+h1{
+    font-family: "Satisfy", cursive;
+    font-size: 10rem;
+}
+
+h2{
+    font-size: 2rem;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+p{
+    height: 6vh;
+    line-height: 2vh;
+    margin-bottom: 2vh;
+}
+
+
+
+
+/*  --  עיצוב לחלק של הטופס  --*/
+form{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+form>div:nth-child(1),form>div:nth-child(2) {
+    text-align: right;
+    width: 40%;
+}
+
+form>div:nth-child(1)>input, form>div:nth-child(2)>input {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border:1px solid #fff;
+    width: 90%;
+    height: 5vh;
+    color: white;
+}
+
+form>div:nth-child(2)>input{
+    direction: ltr;
+}
+
+form>div:nth-child(3){
+    width: 20%;
+   display: flex; 
+   padding-top: 17px;
+}
+
+form>div:nth-child(3)>input{
+    font-size: 1.2rem;
+    padding: 1.5vh 3.5vh;
+    background-color: #fff;
+    border: none;
+}
+
+form>div:nth-child(3)>input:hover{
+    color: black;
+    background:  rgba(255, 255, 255, 0.1);
+    border: 1px solid black
+}
+
+
+/*=========================================*/
+
+
+/*  --  For large screen responsive  -- */
+@media screen and (min-width:2500px) {
+    body{
+        padding: 25vh 0;
+    }
+
+    main{
+        width: 60%
+    }
+
+    h1{
+        font-size: 14rem;
+    }
+
+    h2{
+        font-size: 4rem;
+    }
+
+    p{
+        font-size: 2rem;
+        margin-bottom: 4vh;
+    }
+
+    label{
+        font-size: 2rem ;
+    }
+
+    form>div:nth-child(1)>input, form>div:nth-child(2)>input{
+        font-size: 1.5rem;
+    }
+    form>div:nth-child(3)>input{
+        font-size: 1.5rem;
+    }
+}
+
+
+/*  --  For medium-large screen responsive  -- */
+@media screen and (max-width:1200px) {
+    body{
+        padding: 25vh 0;
+    }
+
+    main{
+        width: 65%
+    }
+
+    h1{
+        font-size: 8rem;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    p{
+        margin-bottom: 3vh;
+    }
+
+    label{
+        font-size: 1rem ;
+    }
+
+    form>div:nth-child(1)>input, form>div:nth-child(2)>input{
+        font-size: 1.4rem;
+    }
+}
+
+
+/*  --  For medium screen responsive  --*/
+@media screen and (max-width:990px) {
+   main{
+        width: 70%;
+    }
+
+    h1{
+        font-size: 6rem;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+
+    p{
+        margin-bottom: 4vh;
+    }
+
+    label{
+        font-size: 0.9rem ;
+    }
+   
+    form>div:nth-child(1)>input, form>div:nth-child(2)>input{
+        font-size: 1.4rem;
+    }
+
+    form>div:nth-child(3)>input{
+        font-size: 1rem;
+        padding: 1vh 3vh;
+    }
+}
+
+
+/*  --  For medium-small responsive  --*/
+@media screen and (max-width:768px) {
+    main{
+        width: 75%;
+    }
+
+    h1{
+        font-size: 4.5rem;
+    }
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    p{
+        margin-bottom: 1vh;
+    }
+
+    label{
+        font-size: 0.9rem ;
+    }
+    form{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form>div:nth-child(1),form>div:nth-child(2),form>div:nth-child(3){
+        display: block;
+        width: 100%;
+        margin: 0.5vh 5vh;
+        position: relative;
+        right:10%
+    }
+
+    form>div:nth-child(3){
+       right: 0;;
+    }
+
+    form>div:nth-child(1)>input, form>div:nth-child(2)>input{
+        width: 80%;
+        font-size: 1.4rem;
+    }
+
+    form>div:nth-child(3)>input{
+        width: 81%;
+    }    
+}
+
+
+/*  --  For small responsive  --  */
+@media screen and (max-width:580px) {
+   main{
+        width: 323px;
+        height: 506px;
+    }
+
+    h1{
+        font-size: 3.75rem;
+    }
+
+    h2{
+        font-size: 1.25rem;
+    }
+    
+    p{
+        margin-bottom: 3vh;
+    }
+
+    label{
+        font-size: 0.8rem ;
+    }
+
+    form{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    form>div:nth-child(1),form>div:nth-child(2),form>div:nth-child(3){
+        width: 100%;
+    }
+
+    form>div:nth-child(1)>input, form>div:nth-child(2)>input{
+        font-size: 1.3rem;
+    }
+}
+
