@@ -315,7 +315,7 @@ form>input[type=email]{
 /*  --  For mid-large screen responsive  -- */
 @media screen and (max-width:1200px) {
     body{
-        padding: 20vh 20vh;
+        padding: 10vh 10vh;
     }
 
     .upperGal{
@@ -332,8 +332,12 @@ form>input[type=email]{
         font-size: 0.8rem;
     }
 
+    .formDiv{
+        padding: 0.2vh 5vh;
+    }
+
     form{
-        height: 35vh;
+        height: 40vh;
     }
 
     h2{
@@ -392,7 +396,7 @@ form>input[type=email]{
 
     form{
         margin-top: 0.5vh;
-        height: 30vh;
+        height: 35vh;
     }
 
     h2{
@@ -428,7 +432,7 @@ form>input[type=email]{
 /*  --  For mid-small screen responsive  -- */
 @media screen and (max-width:768px) {
     body{
-        padding: 15vh 10vh;
+        padding: 10vh 5vh;
     }
 
     
@@ -557,8 +561,8 @@ form>input[type=email]{
 /*  --  For small screen responsive  -- */
 @media screen and (max-width:580px) {
     body{
-        padding: 0 10vh;
-        padding-bottom: 15vh;
+        padding: 0 5vh;
+        
     }
 
     .upperGal, .lowerGal{
