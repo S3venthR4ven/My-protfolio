@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/*  --  עיצוב כללי של העמוד  --  */
+
+*{
+  margin: 0 auto;
+  padding: 0;
+}
+
+body{
+  font-family: "Heebo", sans-serif;
+  direction: rtl;
+  
+}
+main{
+  display: block;
+  width: 100%;
+}
+ 
+
+/*  --  עיצוב של החלק הימני של העמוד  --  */
+
+.rightMainDiv{
+  text-align: left;
+  height: fit-content;
+}
+
+.upperStripe{
+  height: 1.1vh;
+  width: 50%;
+  background-color: #FDBD03 ;
+  float: right;
+}
+
+.imageDiv{
+  background-image: url(../Images/Image\ 1@2x.png);
+  background-repeat: no-repeat;
+  float: left;
+  background-position: left;
+  background-size:70%;
+  
+}
+
+
+/*  --  עיציוב של החלק השמאלי של העמוד  --  */
+
+.leftMainDiv{
+  background-color: grey;
+} 
+
+.whatsappLineDiv{
+  width: 100%;
+  height: 5vh;
+  display: block;
+  direction: ltr;
+  padding: 2vh 0;
+}
+
+
+
+.bi-whatsapp{
+  direction: ltr;
+  font-size: 2rem;
+  background-color: #FDBD03;
+  background-size: 50vh;
+  display: inline-block;
+  height: 5vh;
+  width: 5vh;
+  text-align: center;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+.lowerStripe{
+  height: 1.1vh;
+  background-color: #FDBD03 ;
+  width: 50%;
+  display: inline;
+  right: 50%;
+  
+}
+
+
+
+
+/*  ===================================  */
+/*  ===================================  */
+
+
+
+@media screen and (min-width:993px) {
+  
+  .rightMainDiv{
+    height: 100vh;
+    
+  }
+
+  .upperStripe{
+    height: 1.1vh;
+    width: 50%;
+  }
+
+  .imageDiv{
+    height: 100vh;
+    
+  }
+
+  .leftMainDiv{
+    height: 100vh;
+  }
+
+}
+
+
+@media screen and (min-width:768px) and (max-width:992px) {
+
+  .rightMainDiv{
+    height: 100vh;
+    
+  }
+
+  .upperStripe{
+    height: 1.1vh;
+    width: 65%;
+  }
+
+  .imageDiv{
+    height: 100vh; 
+    background-image: url(../Images/Image\ 1@2x.png);
+    background-size: 70%;
+  }
+  
+}
+
+
+
+
+@media screen and (max-width:767px) {
+
+    .rightMainDiv{
+    height: 225px;
+  }
+
+  .upperStripe{
+    height: 1vh;
+    width: 80%;
+  }
+
+  .imageDiv{
+    height: 225px;
+    /* background-image: url(../Images/Image\ 1.png); */
+  }
+
+  .leftMainDiv{
+    height: 706px;
+  }
+
+}
+
