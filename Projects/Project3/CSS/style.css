@@ -4,18 +4,27 @@
 /*  --  עיצוב כללי של העמוד  --  */
 
 *{
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
+  border-radius: 0;
 }
 
-body{
+
+main{
+  display: block;
+  width: 100%;
   font-family: "Heebo", sans-serif;
   direction: rtl;
   
 }
-main{
-  display: block;
-  width: 100%;
+
+.upperStripe{
+  height: 1vh;
+  background-color: #FDBD03 ;
+  display:inline-block;
+  position:absolute;
+  width: 25%;
+  right: 0;
 }
  
 
@@ -26,64 +35,238 @@ main{
   height: fit-content;
 }
 
-.upperStripe{
-  height: 1.1vh;
-  width: 50%;
-  background-color: #FDBD03 ;
-  float: right;
-}
+
 
 .imageDiv{
   background-image: url(../Images/Image\ 1@2x.png);
   background-repeat: no-repeat;
   float: left;
   background-position: left;
-  background-size:70%;
-  
+  height: inherit;
+  background-size:60%;
 }
 
 
-/*  --  עיציוב של החלק השמאלי של העמוד  --  */
+/*  --  עיצוב של החלק השמאלי של העמוד  --  */
+
 
 .leftMainDiv{
-  background-color: grey;
-} 
-
-.whatsappLineDiv{
-  width: 100%;
-  height: 5vh;
-  display: block;
-  direction: ltr;
-  padding: 2vh 0;
+  text-align: right;
 }
 
 
+.whatsappMainDiv{
+  display: block;
+  position: relative;
+  margin-bottom: 5vh;
+  width: 45%;
+  right: 65%;
+  top: 5%;
+}
 
-.bi-whatsapp{
+.whatsappLineDiv{
+   width: 6%; 
+  height: 6%;
+  display: block;
+  direction: ltr;
+  /* padding: 2vh 0; */
+  align-items: center;
+  text-align: center;
+  /* background-color: #FDBD03;
+  border-radius: 50%; */
+  justify-self: center;
+}
+
+
+/* .bi-whatsapp{ */
+.bi{
   direction: ltr;
   font-size: 2rem;
   background-color: #FDBD03;
   background-size: 50vh;
   display: inline-block;
+  position: relative;
   height: 5vh;
   width: 5vh;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 5vh 5vh;
+  line-height: -0.5rem;
+ }
+
+.bi:hover{
+  color: #FDBD03;
+  background-color: black;
+}
+
+a:link, a:active,a:visited{
+  text-decoration: none;
+  color: black;
 }
 
 
 
+/* --  חלק של הטופס  -- */
+
+.formDiv{
+  margin: 5vh 10vh;
+  z-index: 20;
+}
+
+h1{
+  font-size: 4rem;
+  color: #FDBD03;
+}
+
+.lead{
+  font-size: 2rem;
+}
+
+label{
+  font-size: 1rem;
+}
+
+label[for=name],label[for=email]{
+  margin-top: 3vh;
+}
+
+input[type=name]{
+  display: inline-block;
+  position: relative;
+  left: 4%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0;
+  background-color: #E5EEFF;
+}
+
+input[type=email]{
+  display: inline-block;
+  position: relative;
+  left: 1%;
+  width: 104%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0;
+  background-color: #E5EEFF;
+}
 
 
-
-.lowerStripe{
-  height: 1.1vh;
-  background-color: #FDBD03 ;
-  width: 50%;
-  display: inline;
-  right: 50%;
+.underLine{
+  height: 0.5vh;
+  width: 100%;
+  background-color: #FDBD03;
+  margin-bottom: 4vh;
   
 }
+
+#formRightDiv>.underLine{
+  justify-self: start;
+  position: relative;
+  left: 4%;
+}
+
+#formLeftDiv>.underLine{
+  width: 104%;
+  position: relative;
+  left: 1%;
+}
+
+select{
+  height: 3.5rem;
+  background-color: #E5EEFF;
+}
+
+#selectDiv>.underLine{
+  position: relative;
+  bottom: 0.3vh;
+  height: 0.5vh;
+}
+
+.textArea{
+  border: none;
+  border-radius: 0;
+  background: #E5EEFF;
+}
+
+#textareaDiv>.underLine{
+  position: relative;
+  bottom: 0.5vh;
+}
+
+button{
+  display: inline-flex;
+  position: relative;
+  text-align: right;
+}
+
+.btn{
+  background-color: #FDBD03;
+  color: black;
+  border: 1px solid #FDBD03;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+.btn:hover{
+  background-color: black;
+  color: #FDBD03;
+  border: 1px solid #FDBD03;
+}
+
+.btn:active{
+  background-color: black;
+  color: #FDBD03;
+  border: 1px solid #FDBD03;
+}
+
+
+/*  --  חלק תחתון של הצד השמאלי  --  */
+
+.socialIcons{
+  display: block;
+  position: relative;
+  margin-bottom: 5vh;
+  width: 45%;
+  right: 25%;
+  z-index: 20;
+
+}
+
+.socialIcons>.s-icon{
+  width: 100%;
+  height: 5vh;
+  display: block;
+  background-color: #FDBD03;
+  direction: ltr;
+  padding: 2vh 0;
+  right: 50%;
+}
+
+.socialIcons>.s-icon:nth-child(2){
+  background-color: #FDBD03;
+}
+
+
+.LowerStripeContainer{
+  position: absolute;
+  height: 120vh;
+  width: 1038px;
+  /* background-color: gray; */
+  z-index: 1;
+}
+
+.lowerStripe{
+  background-color: #FDBD03 ;
+  right: 50%;
+  /* top: 110vh; */
+  bottom: 0;
+  width: 100%;
+  position:absolute;
+  display:block;
+  /* width: 1038px; */
+}
+
+
 
 
 
@@ -95,6 +278,10 @@ main{
 
 @media screen and (min-width:993px) {
   
+  main{
+    height: 80vh;
+  }
+
   .rightMainDiv{
     height: 100vh;
     
@@ -102,37 +289,40 @@ main{
 
   .upperStripe{
     height: 1.1vh;
-    width: 50%;
+    width: 25%;
   }
 
   .imageDiv{
-    height: 100vh;
-    
+    height: inherit;
+    float: left;
+    background-size:60%;
   }
 
   .leftMainDiv{
-    height: 100vh;
+    height: 80vh;
   }
 
-}
+} 
 
 
-@media screen and (min-width:768px) and (max-width:992px) {
+@media screen and (max-width:992px) {
 
   .rightMainDiv{
-    height: 100vh;
-    
+    height: 50vh;
+    text-align: right;
+    align-items:end;
+    justify-content:end;
+    justify-items: right;
   }
 
   .upperStripe{
     height: 1.1vh;
-    width: 65%;
+    width: 45%;
   }
 
   .imageDiv{
-    height: 100vh; 
-    background-image: url(../Images/Image\ 1@2x.png);
-    background-size: 70%;
+    height: inherit; 
+    background-size:contain;
   }
   
 }
@@ -142,23 +332,135 @@ main{
 
 @media screen and (max-width:767px) {
 
-    .rightMainDiv{
+  /*  --  חלק ימני/עליון  --  */  
+  
+  .rightMainDiv{
     height: 225px;
   }
 
   .upperStripe{
     height: 1vh;
-    width: 80%;
+    width: 1000%;
   }
 
   .imageDiv{
-    height: 225px;
-    /* background-image: url(../Images/Image\ 1.png); */
+    /* height: 225px; */
+    background-image: url(../Images/Image\ 1.png);
+    background-size: contain;
+    /* text-align: center; */
   }
+
+
+  /*  --  חלק שמאלי/תחתון  --  */
 
   .leftMainDiv{
     height: 706px;
+    padding: 0;
+    margin: 0;
   }
+
+  .whatsappMainDiv{
+    display: none;
+  }
+
+  h1{
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  .lead{
+    font-size: 1.5rem;
+  }
+
+  .lowerStripe{
+    width: 100%;
+  }
+
+
+
+  
+@media screen and (max-width:767px) {
+
+  /*  --  חלק ימני/עליון  --  */  
+  
+  .rightMainDiv{
+    height: 225px;
+    
+  }
+
+  .upperStripe{
+    height: 1vh;
+    width: 1000%;
+  }
+
+  .imageDiv{
+    /* height: 225px; */
+    margin-top: 3vh;
+    background-image: url(../Images/Image\ 1.png);
+    background-size: contain;
+    background-position: center;
+    /* text-align: center; */
+  }
+
+
+  /*  --  חלק שמאלי/תחתון  --  */
+
+  .leftMainDiv{
+    height: 706px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .whatsappMainDiv{
+    display: none;
+  }
+
+  .formDiv{
+    padding: 0;
+    margin: 5vh 2vh;
+  }
+
+  h1{
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .lead{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  input[type=name]{
+    width: 105%;
+  }
+
+  .socialIcons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 5vh;
+    width: 100%;
+    right: 0;
+  }
+  
+  .socialIcons>.s-icon{
+    /* height: 2vh;
+    padding: 1vh 0; */
+  }
+
+  i{
+    font-size: 0.5rem;
+
+  }
+
+
+  .lowerStripe{
+    width: 100%;
+  }
+}
+
 
 }
 
