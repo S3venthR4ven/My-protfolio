@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Heebo:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  direction: rtl;
+  display: flex;
+  flex-direction: row;
+  font-family: "Heebo", sans-serif;
+}
+
+/*  --  חלק ימיני  --  */
+.rightDiv {
+  width: 40%;
+}
+
+.formDiv {
+  width: 60%;
+  margin: 20% auto;
+  height: 60vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #020253;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+p {
+  font-size: 1.5rem;
+  width: 70%;
+  margin-bottom: 2vh;
+  text-align: center;
+  margin: auto;
+}
+
+/*  --  חלק של הטופס  --  */
+form {
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  right: 10%;
+}
+
+.nameDiv > *, .emailDiv > * {
+  display: flex;
+}
+
+label {
+  color: #2C2C2C;
+}
+
+input[type=text], input[type=email] {
+  width: 80%;
+  height: 1.3rem;
+  background-color: #E5EEFF;
+  border: none;
+}
+
+.underLine {
+  height: 0.3rem;
+  width: 80%;
+  background-color: #020253;
+  margin-bottom: 5vh;
+}
+
+.btnDiv {
+  height: 3vh;
+  width: 8vh;
+}
+
+input[type=submit] {
+  height: inherit;
+  width: inherit;
+  background-color: #020253;
+  color: #fff;
+  border: 2px solid #020253;
+}
+
+input[type=submit]:hover {
+  background-color: #fff;
+  color: #020253;
+}
+
+/*  --  חלק שמאלי  --  */
+.leftDiv {
+  background-image: url(../Images/Coffee@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60%;
+  height: 100vh;
+}
+
+/*  ============================================================  */
+/*  ============================================================  */
+/*  ============================================================  */
+@media screen and (max-width: 1440px) {
+  .rightDiv {
+    width: 40%;
+  }
+  .formDiv {
+    width: 60%;
+    margin: 15% auto;
+    height: 70vh;
+  }
+  h1 {
+    font-size: 1.875rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+  .leftDiv {
+    width: 60%;
+    background-position: center;
+    background-image: url(../Images/Coffee.png);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .formDiv {
+    margin-top: 40%;
+    width: 80%;
+  }
+  .leftDiv {
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    direction: ltr;
+    flex-direction: column-reverse;
+  }
+  .leftDiv {
+    width: 100%;
+    height: 35vh;
+    background-size: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .rightDiv {
+    width: 80%;
+    margin: auto;
+    height: 65vh;
+  }
+  .formDiv {
+    direction: rtl;
+    width: 100%;
+    margin: 15% auto;
+    height: 45vh;
+  }
+  h1 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,246 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  direction: rtl;
+  font-family: "Heebo", sans-serif;
+}
+
+/*  --  עיצוב של הכותרת  --  */
+header {
+  width: 100%;
+  height: 50vh;
+  background-color: #0EE1E1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.imageBox {
+  width: 30%;
+  height: 100%;
+  background-image: url(../Images/Group\ 1050.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right;
+  margin-right: 5%;
+}
+
+.headLine {
+  text-align: right;
+  direction: rtl;
+  margin-top: 8%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.headLine > p {
+  font-size: 1.5rem;
+  width: 60%;
+}
+
+#whatsappA {
+  position: fixed;
+  top: 5%;
+  left: 1%;
+  width: 8vh;
+  height: 8vh;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #0EE1E1;
+}
+
+.whatsappDiv {
+  width: 5vh;
+  height: 5vh;
+  position: relative;
+  top: 13%;
+  left: 20%;
+}
+
+#whatsappA:hover {
+  background-color: #F8F8F8;
+}
+
+/*  --  עיצוב של החלק עם הכרטיסיות  --  */
+.optionsDiv {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4vh;
+  box-sizing: border-box;
+}
+
+.cards {
+  width: 23%;
+  height: 80%;
+  background-color: #F0FFFF;
+  text-align: center;
+  border: 0.5px solid lightgray;
+  text-decoration: none;
+}
+
+.cardShadow {
+  width: 100%;
+  height: 74%;
+  padding-top: 15%;
+}
+
+.cardShadow:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.optionsIcons {
+  width: 5vh;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #0EE1E1;
+}
+
+.cardShadow > p {
+  width: 80%;
+  position: relative;
+  right: 10%;
+  color: black;
+}
+
+.cardShadow > p:active {
+  color: black;
+}
+
+.cardShadow > p:visited {
+  color: black;
+}
+
+#locationIcon {
+  width: 3vh;
+}
+
+/*  --  עיצוב החלק של החלק האמצעי  --  */
+.midDiv {
+  display: flex;
+  flex-direction: row;
+  height: 30vh;
+}
+
+/*  --  עיצוב של החלק עם המפה  --  */
+.mapDiv {
+  width: 60%;
+  background-color: #0EE1E1;
+  text-align: center;
+  padding: 2%;
+  height: 90vh;
+}
+
+iframe {
+  height: inherit;
+  width: 100%;
+}
+
+/*  --  עיצוב של החלק עם הטופס  --  */
+.formDiv {
+  width: 40%;
+  background-color: #F0FFFF;
+  height: 97.5vh;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h2 {
+  margin-top: 15%;
+  font-size: 2rem;
+}
+
+.formDiv > p {
+  margin: 2vh 0;
+  width: 80%;
+}
+
+form {
+  position: relative;
+  width: 80%;
+}
+
+label {
+  margin-bottom: 0.5vh;
+}
+
+.nameDiv > *, .emailDiv > * {
+  display: flex;
+}
+
+input[type=text], input[type=email] {
+  width: 99%;
+  height: 1.5rem;
+  background-color: #E5EEFF;
+  border: none;
+  font-family: "Heebo", sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  padding-right: 0.5vh;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+  outline: none;
+}
+
+#textarea {
+  width: 99%;
+  height: 10vh;
+  margin-bottom: 0;
+  border: none;
+  background-color: #E5EEFF;
+  max-width: 99%;
+  min-width: 99%;
+  font-family: "Heebo", sans-serif;
+  font-size: 1rem;
+  padding-right: 0.5vh;
+  font-style: italic;
+}
+
+#textarea:focus {
+  outline: none;
+}
+
+.underLine {
+  width: 100%;
+  height: 0.5vh;
+  background-color: #0EE1E1;
+  margin-bottom: 4vh;
+}
+
+.tellUs > .underLine {
+  position: relative;
+  bottom: 1vh;
+}
+
+input[type=submit] {
+  width: 100%;
+  height: 5vh;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #0EE1E1;
+  border: 2px solid #0EE1E1;
+}
+
+input[type=submit]:hover {
+  background-color: #E5EEFF;
+}
+
+/*  -- עיצוב החלק התחתון  --  */
+.socialDiv {
+  width: 100%;
+  height: 50vh;
+  background-color: #0EE1E1;
+  display: flex;
+  flex-direction: row-reverse;
+}/*# sourceMappingURL=style.css.map */
