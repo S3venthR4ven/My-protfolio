@@ -1,32 +1,672 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap");
+/*  --  עיצוב כללי של הדף  --  */
 * {
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
 }
 
-body{
-  font-family: "Roboto", sans-serif;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-.container{
-  max-width: 800px;
-  min-height: 400px;
-  margin-inline: auto;
-  border: 1px solid #000;
+main {
   display: flex;
-  
-  justify-content: space-evenly;
+  flex-direction: column;
+  direction: rtl;
+  font-family: "Heebo", sans-serif;
 }
 
-.box{
-  min-width: 100px;
-  min-height: 100px;
-  background-color: #000;
-  color: white;
-  font-size: 2rem;
-  padding: 0.5rem;
+/*  --  עיצוב של החלק העליון  --  */
+header {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 30;
+  border-bottom: 0.1vh solid rgba(19, 232, 241, 0.3882352941);
 }
+
+.topLine {
+  width: 100%;
+  height: 0.5vh;
+  background-color: #1AE0EC;
+}
+
+.profileLink {
+  display: flex;
+  float: left;
+  position: relative;
+  left: 10%;
+  direction: ltr;
+  flex-direction: row;
+  width: 20%;
+  height: 7vh;
+  font-family: "Satisfy", cursive;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  border: none;
+}
+
+.imageProfile {
+  position: relative;
+  width: 7vh;
+  height: 100%;
+  background-image: url(../images/profile-image-1@2x.png);
+  background-position: center;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.profileLink > h3 {
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.profileLink > h3:hover {
+  color: #1AE0EC;
+}
+
+/*  */
+.altMenuBar {
+  display: flex;
+  direction: rtl;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  right: 10%;
+  background-color: #fff;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+  color: black;
+  font-size: 2rem;
+  margin: 1vh;
+  cursor: pointer;
+}
+
+#hamburger:hover {
+  color: #1AE0EC;
+}
+
+.navDiv {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2vh;
+}
+
+nav > a {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 20%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  margin: 2vh;
+  top: 10%;
+}
+
+nav > a:hover {
+  color: #1AE0EC;
+}
+
+/*  --  עיצוב של הכותרת  --  */
+.titleDiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(19, 232, 241, 0.3882352941);
+  height: 30vh;
+  padding-top: 5vh;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.titleDiv > p {
+  font-size: 1rem;
+  width: 50%;
+  align-self: center;
+  margin: 2vh 0;
+}
+
+/*  --  עיצוב של החלק של אייקונים במה השתמשתי  --  */
+.iconBar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 10vh;
+}
+
+.subIconBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5vh;
+}
+
+.subIconBar > img {
+  height: 50%;
+  align-self: center;
+  text-align: center;
+}
+
+.iconBar > img {
+  align-self: center;
+  text-align: center;
+}
+
+hr {
+  display: flex;
+  position: relative;
+  height: 0.5vh;
+  background-color: #F6F6F6;
+  border: none;
+}
+
+/*  --  עיצוב חלק אודות  --  */
+.midDiv {
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutDiv {
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin-bottom: 2vh;
+}
+
+.aboutImage {
+  display: flex;
+  position: relative;
+  width: 20%;
+  margin: auto;
+  height: 20vh;
+  margin-top: 2%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.aboutDiv > h2 {
+  font-size: 2rem;
+  margin: 2vh;
+}
+
+.aboutDiv > p {
+  line-height: 1.8rem;
+  margin-bottom: 2vh;
+}
+
+.resumeDownload {
+  display: inline-block;
+  background-color: #1AE0EC;
+  align-content: center;
+  font-size: 1.2rem;
+  width: 20vh;
+  height: 4vh;
+  border-radius: 20px;
+  border: 2px solid #1AE0EC;
+  text-decoration: none;
+  color: black;
+}
+
+.resumeDownload:hover {
+  color: #1AE0EC;
+  background-color: black;
+}
+
+/*  --  עיצוב חלק גלרייה - חלק עליון  --  */
+.servicesDiv {
+  height: 130vh;
+  background-color: #F6F6F6;
+}
+
+.servicesTitle {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.servicesTitle > h2 {
+  font-size: 2rem;
+}
+
+.servicesTitle > p {
+  margin: 2vh;
+}
+
+/*  --  עיצוב הגלרייה עצמה  --  */
+.galleryDiv {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 60%;
+  margin: 0 auto;
+  grid-row-gap: 2vh;
+}
+
+.galleryDiv > div {
+  height: 50vh;
+  margin: 2vh;
+  border: none;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 25, 0);
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.galleryDiv > div:hover {
+  border: 2px solid #1AE0EC;
+}
+
+.previewImage {
+  margin-bottom: 0;
+}
+
+.previewImage > img {
+  border-radius: 20px 20px 0 0;
+}
+
+.galleryDiv > div > hr {
+  margin: 0;
+  margin-bottom: 2vh;
+}
+
+.galleryDiv > div > p {
+  position: relative;
+  width: 80%;
+  margin: 2vh auto;
+}
+
+.galleryDiv > div > a {
+  display: inline-block;
+  background-color: #1AE0EC;
+  align-content: center;
+  font-size: 1rem;
+  width: 15vh;
+  height: 3vh;
+  border-radius: 20px;
+  border: 2px solid #1AE0EC;
+  text-decoration: none;
+  color: black;
+}
+
+.galleryDiv > div > a:hover {
+  color: #1AE0EC;
+  background-color: black;
+}
+
+/*  --  עיצוב של החלק של דרכי תקשורת  --  */
+.contactDiv {
+  display: flex;
+  flex-direction: row;
+  height: 70vh;
+  background-color: #3A3A3A;
+  padding: 5% 20%;
+}
+
+.formDiv {
+  width: 100%;
+}
+
+.formDiv > h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.formDiv > p {
+  color: #fff;
+  margin: 2vh 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div > label {
+  color: #fff;
+  margin: 1vh 0;
+}
+
+form > div > input {
+  height: 1.5rem;
+  margin: 0;
+  font-family: "Heebo", sans-serif;
+}
+
+input[type=email] {
+  direction: ltr;
+}
+
+form > div > .underline {
+  position: relative;
+  height: 0.5vh;
+  background-color: #1AE0EC;
+  width: 99.5%;
+  right: 0.3%;
+  margin: 0;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 50%;
+  min-height: 7rem;
+  max-height: 13rem;
+  font-family: "Heebo", sans-serif;
+}
+
+.formMessegeDiv > .underline {
+  width: 100%;
+}
+
+.submitDiv {
+  margin: 3vh 0;
+  height: 2.5rem;
+  justify-content: center;
+}
+
+.submitDiv > input {
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 40%;
+  margin: 0 auto;
+  background-color: #1AE0EC;
+  border: 1px solid #1AE0EC;
+  border-radius: 20px;
+}
+
+.submitDiv > input:hover {
+  background-color: black;
+  color: #1AE0EC;
+}
+
+/*  */
+.sideForm {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  right: 10%;
+  opacity: 0.5;
+  background-image: url(../images/letter.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: center;
+  margin: auto auto;
+}
+
+/*  --  עיצוב חלק רשתות חברתיות  --  */
+.socialDiv {
+  background-color: #F6F6F6;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2% 10%;
+}
+
+.socialDiv > a {
+  text-decoration: none;
+  color: black;
+}
+
+.socialIcon {
+  height: 4vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  justify-content: center;
+  margin: 2vh 0;
+}
+
+/*  --  עיצוב של החלק התחתון  --  */
+footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.footerBar {
+  text-align: left;
+  height: 5vh;
+  align-content: center;
+  background-color: #1AE0EC;
+  color: #EBFEFF;
+}
+
+.footerBar > p {
+  position: relative;
+  left: 10%;
+}
+
+/*  ==================================  */
+/*  ==================================  */
+/*  ==================================  */
+/*  --  עיצוב למסכים רגילים  --  */
+@media screen and (max-width: 1024px) {
+  .iconBar {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 20vh;
+  }
+  .subIconBar {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 2vh 4vh;
+  }
+  .subIconBar > img {
+    height: 40%;
+    margin: 0 auto;
+  }
+  /*  */
+  .aboutImage {
+    left: 5%;
+  }
+  /*  */
+  .servicesDiv {
+    height: 130vh;
+  }
+  .galleryDiv {
+    width: 70%;
+  }
+  .galleryDiv > div {
+    height: 46vh;
+  }
+  /*  */
+  .contactDiv {
+    height: 65vh;
+  }
+  /*  */
+  .socialDiv {
+    height: 10vh;
+    padding: 1% 6%;
+  }
+  .socialIcon {
+    height: 3vh;
+    margin: 2vh 0;
+  }
+  .socialDiv > a > p {
+    font-size: 0.8rem;
+  }
+}
+/*  --  עיצוב לטאבלטים  --  */
+@media screen and (max-width: 768px) {
+  .profileLink {
+    width: 35%;
+  }
+  .altMenuBar {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+  #hamburger {
+    display: flex;
+    float: right;
+    margin-right: 0;
+  }
+  .navDiv {
+    display: none;
+    width: inherit;
+  }
+  input[type=checkbox]:checked ~ .navDiv {
+    display: flex;
+    position: relative;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    justify-content: center;
+    gap: 2vh;
+    margin-bottom: 2vh;
+    margin-right: 10%;
+  }
+  nav > a {
+    font-size: 1rem;
+    display: flex;
+    top: 10%;
+    margin: 0;
+    top: 10%;
+  }
+  /*  */
+  .titleDiv {
+    padding-bottom: 3vh;
+  }
+  .iconBar {
+    padding: 2vh 0;
+    height: 25vh;
+    height: 30vh;
+  }
+  .subIconBar > img {
+    height: 25%;
+    margin: 0 auto;
+  }
+  .aboutDiv {
+    padding: 2vh 0;
+    height: 75vh;
+  }
+  .aboutImage {
+    left: 10%;
+  }
+  /*  */
+  .servicesDiv {
+    height: 485vh;
+  }
+  .galleryDiv {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .galleryDiv > div {
+    height: 70vh;
+    margin: 2vh;
+  }
+  /*  */
+  .contactDiv {
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .sideForm {
+    width: 100%;
+    height: 50vh;
+    margin: 2vh;
+    right: 0;
+    background-size: cover;
+  }
+  /*  */
+  .socialDiv {
+    height: 25vh;
+    padding: 1% 5%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5% 20%;
+    text-align: center;
+    gap: 2vh;
+  }
+  .socialIcon {
+    height: 3vh;
+    margin: 1vh 0;
+  }
+  .socialIcon > img {
+    width: 3vh;
+  }
+  #facebookIcon > img, #placeIcon > img {
+    width: 2vh;
+  }
+  .socialDiv > a > p {
+    font-size: 0.8rem;
+  }
+}
+/*  --  עיצוב למסכים קטנים  --  */
+@media screen and (max-width: 450px) {
+  .profileLink {
+    left: 5%;
+    width: 50%;
+  }
+  .profileLink > h3 {
+    font-size: 1rem;
+  }
+  /*  */
+  .titleDiv {
+    height: 40vh;
+  }
+  .titleDiv > h1 {
+    font-size: 2.5rem;
+  }
+  .titleDiv > p {
+    font-size: 1rem;
+  }
+  /*  */
+  .iconBar {
+    height: 60vh;
+  }
+  .subIconBar > img {
+    height: 5vh;
+  }
+  /*  */
+  .aboutDiv {
+    height: 120vh;
+  }
+  .aboutImage {
+    left: 35%;
+  }
+  .servicesDiv {
+    height: 380vh;
+    margin: 0 auto;
+  }
+  .galleryDiv > div {
+    height: 50vh;
+    width: 90%;
+  }
+  .socialDiv {
+    height: 40vh;
+  }
+}/*# sourceMappingURL=style.css.map */

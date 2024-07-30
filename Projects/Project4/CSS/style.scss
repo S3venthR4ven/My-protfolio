@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+$SpecialColor: #D3E10E;
+$height: 80vh;
+$sizeH1: 4rem;
+$sizeP: 3rem;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  direction: rtl;
+  justify-content: center;
+  display: block;
+  font-family: "Assistant", sans-serif;
+}
+
+
+/*  --  סתם פרמטר למשחק / ניסיון עם מיקסן  --*/
+@mixin StartDiv() {
+  width: 100%;
+}
+
+
+
+/*  --  חלק עליון  --  */
+
+.upperDiv{
+  @include StartDiv();
+  background-image: url(../images/Path15@2x.png);
+  background-size: cover ;
+  width: inherit;
+  background-position: top;
+  background-repeat: no-repeat ;
+  height: inherit;
+  text-align: center;
+  height: $height;
+  
+}
+
+h1{
+  padding-top: 13%;
+  color: $SpecialColor;
+  font-size: $sizeH1;
+}
+
+p{
+  color: #fff;
+  font-size: $sizeP
+}
+
+
+
+/*  --  חלק תחתון  --  */
+
+.lowerDiv{
+  @include StartDiv;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  height: 100 - $height;
+}
+
+
+/*  --  חלק של הטופס  --  */
+
+form{
+  text-align: right;
+  display: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  position: relative;
+  top: 30%;
+}
+
+.nameDiv{
+  margin-left: 5vh;
+}
+
+.emailDiv{
+  margin-left: 7vh;
+}
+
+label{
+  font-size: 1.3rem;
+}
+
+input{
+  height: 1.5rem;
+}
+
+input[type=text], input[type=email]{
+  background-color: #F6F6F6;
+  border: none; 
+}
+
+.underLine{
+  height: 0.5vh;
+  background-color: $SpecialColor;
+}
+
+.btnDiv{
+  width: 12vh;
+  height: 3.5vh;
+  position: relative;
+  top: 11%;
+  
+}
+
+input[type=submit]{
+  height: inherit;
+  width: inherit;
+  background-color: #1b3475;
+  font-size: 1.2rem;
+  color: #D3E10E;
+  border: 1px solid #1b3475;
+  border-radius: 10px;
+  position: relative;
+  left: 30%;
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  color: #1b3475;
+  background-color: #D3E10E;
+}
+
+
+/*  =============================================  */
+/*  =============================================  */
+/*  =============================================  */
+
+
+
+
+/*  --  עיצוב למסכים גדולים במיוחד  --  */
+
+@media screen and (max-width:1440px) {
+  .upperDiv{
+    height: 0.80 * $height;
+    background-size: cover;
+  }
+
+  p{
+    font-size: 0.75 * $sizeP;
+  }
+}
+
+
+/*  --  עיצוב למסכים גדולים  --  */
+
+@media screen and (max-width: 1024px) {
+  p{
+    font-size: 0.6*$sizeP;
+    width: 70%;
+    position: relative;
+    right: 15%;
+  }
+  
+  form{
+    position: relative;
+    left:5%
+  }
+}
+
+
+/*  --  עיצוב למסכים בינוניים  --  */
+
+@media screen and (max-width: 768px) {
+  .upperDiv{
+    height: 0.6*$height;
+  }
+
+  h1{
+    font-size: 0.75*$sizeH1;
+  }
+
+  p{
+    font-size: 0.5*$sizeP;
+    width: 60%;
+    position: relative;
+    right: 20%;
+  }
+
+  form{
+    left: 15%;
+  }
+}
+
+
+/*  --  עיצוב למסכים קטנים  --  */
+
+@media screen and (max-width:700px) {
+  .upperDiv{
+    height: 0.5*$height;
+    background-image: url(../images/Path15.png);
+  }
+
+  h1{
+    padding-top: 20%;
+    font-size: 0.6*$sizeH1;
+  }
+
+  p{
+    width: 90%;
+    right: 5%;
+    font-size: 0.4*$sizeP;
+  }
+  
+  
+  .lowerDiv{
+    height: 0.5*$height;
+    width: 100%;
+    
+  }
+
+  form{
+    top: 10%;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    right: 5%;
+  }
+
+  form>*{
+    padding-top: 15%;
+    width: 100%;
+  }
+
+  input[type=text],input[type=email]{
+    width: 100%;
+  }
+
+  .emailDiv{
+    position: relative;
+    right: 2%
+  }
+
+}

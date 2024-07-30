@@ -1,5 +1,16 @@
 
-//*  --  עיצוב כללי של העמוד  --  */
+/*  --  משתנים  --  */
+
+$optionDivHeight: 40vh;
+$headLinePwidth: 70%;
+$midHeight: 90vh;
+$inputWidth: 98.2%;
+$socialIconsMargin:  15%;
+
+
+
+
+/*  --  עיצוב כללי של העמוד  --  */
 
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
 
@@ -9,6 +20,8 @@
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     direction: rtl;
     font-family: "Heebo", sans-serif;
 }
@@ -23,6 +36,7 @@ header {
     background-color: #0EE1E1;
     display: flex;
     flex-direction: row-reverse;
+    z-index: 0;
 }
 
 .imageBox{
@@ -47,7 +61,7 @@ h1{
 
 .headLine>p{
     font-size: 1.5rem;
-    width: 60%;
+    width: $headLinePwidth
 }
 
 #whatsappA{
@@ -59,6 +73,7 @@ h1{
     background-color: white;
     border-radius: 50%;
     border: 1px solid #0EE1E1;
+    z-index: 20;
 }
 
 .whatsappDiv{
@@ -78,7 +93,7 @@ h1{
 /*  --  עיצוב של החלק עם הכרטיסיות  --  */
 
 .optionsDiv{
-    height: 40vh;
+    height: $optionDivHeight;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -89,7 +104,7 @@ h1{
 
 .cards {
     width: 23%;
-    height: 80%;
+    height: inherit;
     background-color: #F0FFFF;
     text-align: center;    
     border: 0.5px solid lightgray;
@@ -98,12 +113,13 @@ h1{
 
 .cardShadow{
     width: 100%;
-   height: 74%;
+    height: $optionDivHeight * 0.65;
     padding-top: 15%;
+    
 }
 
 .cardShadow:hover{
-    background-color: rgba(0,0,0,0.2) ;
+    background-color: rgba(50,50,50,0.3) ;
 }
 
 .optionsIcons{
@@ -141,7 +157,7 @@ h3{
 .midDiv{
     display: flex;
     flex-direction: row;
-    height: 30vh;
+    height: $midHeight
 }
 
 
@@ -149,18 +165,16 @@ h3{
 /*  --  עיצוב של החלק עם המפה  --  */
 
 .mapDiv{
-    width: 60%;
+    width: 70%;
     background-color: #0EE1E1;
     text-align: center;
     padding: 2%;
-    height: 90vh;
+    height: inherit;
 }
 
 iframe{
-    // margin-top: 2%;
     height: inherit;
     width: 100%;
-    
 }
 
 
@@ -168,11 +182,13 @@ iframe{
 /*  --  עיצוב של החלק עם הטופס  --  */
 
 .formDiv{
-    width: 40%;
+    height: inherit;
+    width: 30%;
     background-color: #F0FFFF;
-    height: 97.5vh;
+    height: $midHeight * 1.085;
     padding-right: 10% ;
     padding-left:  10%;
+    z-index: 0;
 }
 
 h2{
@@ -187,88 +203,467 @@ h2{
 
 form{
     position: relative;
-    width: 80%;
+    width: 90%;
 }
 
 label{
     margin-bottom: 0.5vh;
 }
 
-.nameDiv>*, .emailDiv>*{
-    display: flex;
-    
-  }
 
-  input[type=text],input[type=email]{
-    width: 99%;
+.nameDiv>*, .emailDiv>*{
+    display: flex;  
+}
+
+input[type=text],input[type=email]{
+    width: $inputWidth;
     height: 1.5rem;
     background-color: #E5EEFF;
     border: none;
     font-family: "Heebo", sans-serif;
     font-size: 1rem;
     font-style: italic;
-    padding-right: 0.5vh;
-  }
+    padding-right: 0.7vh;
+    
+}
 
-  input[type=text]:focus ,input[type=email]:focus{
+input[type=text]:focus ,input[type=email]:focus{
     outline: none;
 
-  }
+}
 
-  #textarea{
-    width: 99%;
+#textarea{
+    width: $inputWidth;
     height: 10vh;
+    margin-top: 0.5vh;
     margin-bottom: 0;
     border: none;
     background-color: #E5EEFF;
-    max-width: 99%;
-    min-width: 99%;
+    max-width: $inputWidth;
+    min-width: $inputWidth;
     font-family: "Heebo", sans-serif;
     font-size: 1rem;
     padding-right: 0.5vh;
     font-style: italic;
-  }
+}
 
-  #textarea:focus{
+#textarea:focus{
     outline: none ;
-  }
+}
 
-  .underLine{
+.underLine{
     width: 100%;
     height: 0.5vh;
     background-color: #0EE1E1;
     margin-bottom: 4vh;
-    
-  }
+}
 
-  .tellUs>.underLine{
+.tellUs>.underLine{
     position: relative;
     bottom: 1vh;
-  }
+    width: $inputWidth * 1.012
+}
 
-  input[type=submit]{
+input[type=submit]{
     width: 100%;
     height: 5vh;
     font-size: 1.2rem;
     font-weight: bold;
     background-color: #0EE1E1;
     border: 2px solid #0EE1E1;
-  }
+}
 
-  input[type=submit]:hover{
+input[type=submit]:hover{
     background-color: #E5EEFF;
-  }
+}
 
 
 
-  /*  -- עיצוב החלק התחתון  --  */
+/*  -- עיצוב החלק התחתון  --  */
     
-  .socialDiv {
-    width:100%;
-    height: 50vh;
-    background-color: #0EE1E1;
+footer {
     display: flex;
-    flex-direction: row-reverse;
-  }
+    flex-direction: column;
+}
 
- 
+.socialDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    height: 20vh;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    margin: 2vh 0;
+}
+
+.socialA{
+    position: relative;
+    top: 20%;
+    justify-content: space-between;
+    background-color: #0EE1E1;
+    width: 7vh;
+    height: 7vh;
+    margin: 2vh;
+    border-radius: 50%;
+    border: 2px solid #0EE1E1;
+}
+
+
+
+.socialA:hover{
+    background-color: rgba(50,50,50,0.3)
+}
+
+.socialIcons{
+    width: 2rem;
+    position: relative;
+    top: $socialIconsMargin
+}
+
+#facebookA>.socialIcons{
+    width: 1.2rem;
+}
+
+.bottomLine{
+    width: 100%;
+    height: 1.5vh;
+    background-color: #0EE1E1;
+    position: relative;
+}
+
+/*  =========================================================  */
+/*  =========================================================  */
+/*  =========================================================  */
+
+/*  --  התאמה למסכים גדולים מאוד  --  */
+@media screen and (max-width:2500px) {
+    header{
+        height: 35vh;
+    }
+
+    .headLine{
+        margin-top: 7%;
+    }
+
+
+    /* */
+
+    .optionsDiv{
+        height: $optionDivHeight*0.8;
+    }
+
+    .cards{
+        height: $optionDivHeight*0.6;
+    }
+
+    /* */
+
+    .formDiv{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    /* */
+
+    .socialIcons{
+        top: $socialIconsMargin*2;
+    }
+
+}
+
+
+/*  --  התאמה למסכים גדולים  --  */
+@media screen and (max-width:1440px) {
+    .formDiv{
+        height: $midHeight*1.075;
+    }
+
+    .socialIcons{
+        top: $socialIconsMargin*1.5;
+    }
+}
+
+
+
+/*  --  התאמה למסכים רגילים  --  */
+@media screen and (max-width:1024px) {
+    header{
+        height: 50vh;
+    }
+
+    /* */
+
+    .optionsDiv{
+        height: $optionDivHeight;
+    }
+    
+    .cards{
+        height: $optionDivHeight*0.8;
+    }
+
+    /* */
+
+    .formDiv{
+        height: $midHeight * 1.054;
+    }
+
+    /* */
+
+    .socialIcons{
+        top: $socialIconsMargin;
+    }
+}
+
+
+/*  --  התאמה למסכי טאבלט  --  */
+@media screen and (max-width:768px) {
+    main{
+        padding: auto;
+        margin: auto;
+    }
+    
+    .imageBox{
+        width: 40%;
+        background-size: 70%;
+    }
+
+    .headLine{
+        margin-top: 11%;
+    }
+
+    .headLine>p{
+        width: $headLinePwidth * 1.1;
+    }
+
+    /* */
+
+    .optionsDiv{
+        display:flex;
+        position: relative;
+        flex-direction: column;
+        height: $optionDivHeight*4;
+        align-items: end;
+        column-gap: 2px;       
+    }
+
+    .cards{
+        position: relative;
+        width: 80%;
+        left: 10%;
+        height: 25vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cardShadow{
+        margin: 0;
+        padding-top: 5%;
+    }
+
+    /* */
+
+    .midDiv{
+        flex-direction: column;
+        align-items: end;
+        padding: 0 2vh;
+        
+    }
+
+    .mapDiv{
+        position: relative;
+        width: 85%;
+        left: 5%;
+        height: $midHeight*0.8 ;
+        margin-bottom: 2vh;
+        
+    }
+
+    .formDiv{
+        padding-top: 3vh;
+        margin-top: 2vh;
+        width: 100%;
+        
+        position: relative;
+    }
+
+    .formDiv>h2,.formDiv>p{
+        width: 90%;
+        margin: 0 10vh;
+    }
+
+
+    form{
+        width: 90%;
+        margin: 4vh 10vh;
+    }
+
+    input[type=email],input[type=text]{
+        height: 2rem;
+    }
+
+    #textarea{
+        height: 20vh;
+    }
+
+    .emailDiv>.underLine, .nameDiv>.underLine,.tellUs>.underLine{
+        width: 99.1%;
+    }
+
+    input[type=submit]{
+        height: 10vh;
+    }
+
+    /* */
+
+
+    footer{
+        position: absolute;
+        width: 100%;
+        top: 365%;
+    }
+
+}
+
+
+/*  --  התאמה למסכים קטנים  --  */
+
+@media screen and (max-width:500px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageBox{
+        background-size: 75%;
+        padding: 0;
+        margin: 0;
+        height: 15vh;
+        margin-top: 2vh;
+    }
+
+    .headLine>h1{
+        font-size: 2.5rem;
+        padding-right: 7%;
+        margin-bottom: 2vh;        
+    }
+
+    .headLine>p{
+        font-size: 1rem;
+        padding-right: 7%;
+        line-height: 1.2rem;
+    }
+
+    #whatsappA{
+        
+        top: 5%;
+        left: 1%;
+        width: 5vh;
+        height:  5vh;
+        
+    }
+    
+    .whatsappDiv{
+        width: 3vh;
+        height: 3vh;
+       
+        top: 13%;
+        left: 20%;
+    }
+
+    /*  */
+
+    .optionsDiv{
+        height: $optionDivHeight*3.5;
+    }
+    
+    .cards{
+        height: $optionDivHeight*0.7;
+    }
+
+    .cardShadow{
+        height: $optionDivHeight*0.7;
+    }
+
+    /*  */
+
+    .mapDiv{
+        height: $midHeight*0.5;
+    }
+
+    /*  */
+
+    .formDiv{
+        width: 90%;
+        margin: auto;
+    }
+
+    .formDiv>h2{
+        margin: 0;
+        margin-bottom: 1vh;
+    }
+
+    .formDiv>p{
+        margin: 0;
+        margin-bottom: 3vh;
+    }
+
+    form{
+        width: 100%;
+        margin: 0;
+    }
+
+    .emailDiv>.underLine, .nameDiv>.underLine{
+        width: 100%;
+    }
+
+    .tellUs>.underLine{
+        width: 99.5%;
+    }
+
+    input[type=submit]{
+        height: 7vh;
+    }
+
+    footer{
+        top: 310%;
+    }
+
+
+}
+
+/*  --  התאמה למסכים קטנים מאוד  --  */
+
+@media screen and (max-width:350px) {
+    #whatsappA{
+        left: 2%;
+    }
+
+    footer{
+        top: 312%;
+    }
+
+    .socialA{
+        width: 5vh;
+        height: 5vh;
+        
+    }
+
+    .socialIcons{
+        width: 1.2rem;
+        top: 20%;
+    }
+
+    #facebookA>.socialIcons{
+        width: 1rem;
+    }
+
+    #instagramA>.socialIcons, #telA>.socialIcons {
+        top: 25%;
+    }
+  
+}

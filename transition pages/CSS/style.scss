@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap');
+$imageSize: 80%;
+
+/*  --  עיצוב כללי של הדף  --  */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    font-family: "Heebo", sans-serif;
+}
+
+
+/*  --  עיצוב של החלק העליון  --  */
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+.topLine{
+    width: 100%;
+    height: 0.5vh;
+    background-color: #1AE0EC;
+}
+
+.profileLink{
+    display: flex;
+    float: left;
+    position: relative;
+    left: 10%;
+    direction: ltr;
+    flex-direction: row;
+    width: 20%;
+    height: 7vh;
+    font-family: "Satisfy", cursive;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border: none;
+}
+
+.imageProfile{
+    position: relative;
+    width: 7vh;
+    height: 100%;
+    background-image: url(../images/profile-image.jpg);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+
+.profileLink>h3{
+    font-weight:500;
+    letter-spacing: 0.1rem;
+}
+
+.profileLink>h3:hover{
+    color: #1AE0EC;
+}
+
+/*  */
+
+
+.altMenuBar{
+    display: none !important;
+    direction: rtl;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    right: 10%;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+#hamburger{
+    display: none;
+    color: black;
+    font-size: 2rem;
+    margin: 1vh;
+    cursor: pointer;
+}
+
+#hamburger:hover{
+    color: #1AE0EC;
+}
+
+.navDiv{
+    display: flex;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2vh;
+}
+
+nav>a{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 20%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    margin: 2vh;
+    top: 10%;
+}
+
+nav>a:hover{
+    color: #1AE0EC;
+}
+
+
+/*  --  עיצוב של הכותרת  --  */
+
+.titleDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #13E8F163;
+    height: 40vh;
+    padding-top: 10vh;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+.titleDiv>p{
+    font-size: 1rem;
+    width: 70%;
+    align-self: center;
+    margin: 2vh 0;
+}
+
+.linksDiv{
+    display: flex;
+    width: 40%;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linksDiv>a{
+    background-color: #1AE0EC;
+    border-radius: 10px;
+    font-size: 1rem;
+    height: 3vh;
+    width: 20vh;
+    text-decoration: none;
+    color: black;
+    border: 2px solid #1AE0EC;
+}
+
+.linksDiv>a:hover{
+    background-color: black;
+    color: #1AE0EC;
+}
+
+
+
+/*  --  עיצוב של החלק של אייקונים במה השתמשתי  --  */
+
+
+
+.iconBar{
+    display: flex;
+    position:relative;
+    justify-content: center;
+    height: 10vh;
+}
+
+.subIconBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10vh;
+}
+
+.iconBar>img{
+    align-self: center;
+    text-align: center;
+}
+
+
+
+/*  --  עיצוב של החלק של התצוגה המקדימה  --  */
+
+.lowerDiv{
+    display: flex;
+    background-color: #EBFEFF;
+    height: 50vh;
+    align-items: center;
+    text-align: center;
+}
+
+.pageImage{
+    width: 100%;
+    height: $imageSize;
+    justify-content: center;
+}
+
+.pageImage>img{
+    border: 1px solid black;
+    height: 100%;
+}
+
+
+
+/*  --  עיצוב של החלק התחתון  --  */
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerBar{
+    text-align: left;
+    height: 5vh;
+    align-content: center;
+    background-color: #1AE0EC;
+    color: #EBFEFF;
+}
+
+.footerBar>p{
+    position: relative;
+    left: 10%;
+}
+
+/*  =============================  */
+/*  =============================  */
+/*  =============================  */
+
+/*  --  עיצוב לטאבלטים  --  */
+@media screen and (max-width:768px) {
+    
+    
+    .profileLink{
+        width: 35%;
+       }
+           
+       .altMenuBar{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+       }
+       
+       #hamburger{
+            display: flex;
+            float: right;
+            margin-right: 0 ;
+       }
+    
+        .navDiv{
+            display: none;
+         width: inherit;
+       }
+    
+        input[type=checkbox]:checked~.navDiv{
+            display: flex;
+            position: relative;
+        }
+    
+        nav{
+            display: flex;
+            flex-direction: column;
+            height: 10%;
+            justify-content: center;
+            gap: 2vh;
+            margin-bottom: 2vh;
+            margin-right: 10%;
+        }
+    
+        nav>a{
+            font-size: 1rem;
+            display: flex;
+            top: 10%;
+            margin: 0;
+            top: 10%;
+        }
+    
+    .linksDiv{
+        width: 50vh;
+    }
+
+    .pageImage{
+        height: $imageSize*0.9;
+    }
+
+}
+
+
+/*  --  עיצוב למסכים קטנים  --  */
+@media screen and (max-width:500px) {
+    
+    .profileLink{
+        left: 5%;;
+        width: 50%;
+    }
+
+    .profileLink>h3{
+        font-size: 1rem;
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+    
+    .linksDiv{
+        width: 35vh;
+    }
+    
+    .linksDiv>a{
+        width: 16vh;
+        font-size: 0.8;
+    }
+
+    .subIconBar{
+        gap: 5vh;
+    }
+
+    .pageImage{
+        height: $imageSize*0.7;
+    }
+
+    .footerBar>p{
+        left: 5%;
+    }
+
+}
+
+
